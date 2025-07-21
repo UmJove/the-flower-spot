@@ -1,5 +1,5 @@
 #Sistema Cadastro/Buscar de Cliente :
-
+# comentário
 dados = {}
 
 def cadastrar_cliente():
