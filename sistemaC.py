@@ -36,16 +36,19 @@ def adicionar_ao_carrinho():
         print("Entrada inválida.")
 
 def remover_do_carrinho():
-    ver_carrinho()
-    try:
-        id = int(input("Digite o ID do produto para remover: "))
-        if id in carrinho:
-            del carrinho[id]
-            print("Produto removido do carrinho.")
-        else:
-            print("Produto não está no carrinho.")
-    except ValueError:
-        print("Entrada inválida.")
+    if not carrinho:
+        print("\nCarrinho vazio.")
+    else:
+        ver_carrinho()
+        try:
+            id = int(input("Digite o ID do produto para remover: "))
+            if id in carrinho:
+                del carrinho[id]
+                print("Produto removido do carrinho.")
+            else:
+                print("Produto não está no carrinho.")
+        except ValueError:
+            print("Entrada inválida.")
 
 def ver_carrinho():
     print("\nCarrinho atual:")
