@@ -98,6 +98,9 @@ def menu():
         else:
             print("Opção inválida. Tente novamente.")
 
+def inicio():
+    print("\nSeja bem-vindo à 'The Flower Spot', sua floricultura digital!")
+    menu()
 
 # Iniciar o sistema
-menu()
+inicio()
