@@ -9,6 +9,7 @@ produtos = {
 }
 
 carrinho = {}
+dados_do_pedido = {}
 
 def listar_produtos():
     print("\nProdutos disponíveis:")
@@ -54,7 +55,7 @@ def ver_carrinho():
     print("\nCarrinho atual:")
     if not carrinho:
         print("Carrinho vazio.")
-    else:
+    else: #sugestão transformar calculo_total em função separada para incluir na finalização da compra e no recibo
         total = 0
         for id, item in carrinho.items():
             subtotal = item["preco"] * item["quantidade"]
@@ -65,10 +66,38 @@ def ver_carrinho():
 def finalizar_compra():
     ver_carrinho()
     if carrinho:
+        formulario_compra() # função de preenchimento de formulário para finalização do pedido
         print("\nCompra finalizada! Obrigado pela preferência.")
         carrinho.clear()
     else:
         print("Seu carrinho está vazio.")
+
+def formulario_compra(): # incluir verificações de valores (try/except)
+        print("\nPara finalizar sua compra forneça as informações a seguir: \n")
+        comprador = input("Nome do comprador: ")
+        cpf = input("CPF: ") 
+        endereco_rua = input("Endereço(logradouro): ")
+        endereco_numero = input("Endereço(numero): ")
+        forma_pagamento = input("Escolha uma forma de pagamento:\n 1 - Crédito\n 2 - Débito\n 3 - Pix\n ")
+        
+        dados_do_pedido["comprador"] = comprador
+        dados_do_pedido["cpf"] = cpf
+        dados_do_pedido["endereço"] = {endereco_rua:endereco_numero}
+        dados_do_pedido["pedido"] = carrinho
+        if forma_pagamento == "1":
+            dados_do_pedido["forma de pagamento"] = "crédito"
+        elif forma_pagamento == "2":
+            dados_do_pedido["forma de pagamento"] = "débito"
+        elif forma_pagamento == "3":
+            dados_do_pedido["forma de pagamento"] = "pix"
+        # fazer estrutura de erro para permitir ao comprador "ajustar" a opção escolhida   
+        # else:
+        #     raise ValueError ("opção inválida, escolha novamente") 
+        
+        print("\n>> Dados do pedido <<")
+        for c,v in dados_do_pedido.items():
+            print(f"{c} - {v}")
+            
 
 def menu():
     while True:
