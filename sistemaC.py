@@ -33,7 +33,7 @@ def adicionar_ao_carrinho():
                     "preco": produtos[id]["preco"],
                     "quantidade": quantidade
                 }
-            print(f"{quantidade}x {produtos[id]['nome']} adicionado ao carrinho.")
+            print(f"\n{quantidade}x {produtos[id]['nome']} adicionado ao carrinho.")
         else:
             print("Produto não encontrado.")
     except ValueError:
@@ -45,7 +45,7 @@ def remover_do_carrinho():
     else:
         ver_carrinho()
         try:
-            id = int(input("Digite o ID do produto para remover: ")) # imprimir id dos produtos
+            id = int(input("Digite o ID do produto para remover: ")) 
             if id in carrinho:
                 del carrinho[id]
                 print("Produto removido do carrinho.")
@@ -58,12 +58,12 @@ def ver_carrinho():
     print("\nCarrinho atual:")
     if not carrinho:
         print("Carrinho vazio.")
-    else: #sugestão transformar calculo_total em função separada para incluir na finalização da compra e no recibo
+    else: 
         total = 0
         for id, item in carrinho.items():
             subtotal = item["preco"] * item["quantidade"]
             total += subtotal
-            print(f"{item['quantidade']}x {item['nome']} - R${item['preco']:.2f}")
+            print(f"{item['quantidade']}x {item['nome']} - R${item['preco']:.2f} (id = {id})") # imprimindo id dos produtos
         print(f"Total: R${total:.2f}")
 
 def finalizar_compra():
