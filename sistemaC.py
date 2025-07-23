@@ -8,6 +8,7 @@ produtos = {
     5: {"nome": "Buquê Paris", "preco": 380.00}
 }
 
+    
 carrinho = {}
 dados_do_pedido = {}
 def listar_produtos():
@@ -41,7 +42,7 @@ def remover_do_carrinho():
     else:
         ver_carrinho()
         try:
-            id = int(input("Digite o ID do produto para remover: "))
+            id = int(input("Digite o ID do produto para remover: ")) # imprimir id dos produtos
             if id in carrinho:
                 del carrinho[id]
                 print("Produto removido do carrinho.")
@@ -172,5 +173,8 @@ def inicio():
     print("\nSeja bem-vindo à 'The Flower Spot', sua floricultura digital!")
     menu()
 
+    
+
 # Iniciar o sistema
 inicio()
+
