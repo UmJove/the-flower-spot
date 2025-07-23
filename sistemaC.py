@@ -1,13 +1,16 @@
 #Sistema carrinho de compra:
 
 produtos = {
-    1: {"nome": "Buquê com 3 Rosas Brancas", "preco": 100.00},
-    2: {"nome": "Buquê com 3 Rosas vermelhas", "preco": 100.0},
-    3: {"nome": "Buquê com 3 Rosas cor de Rosa", "preco": 100.00},
-    4: {"nome": "Buquê Mix de Flores M (colorido)", "preco": 220.00},
-    5: {"nome": "Buquê Paris", "preco": 380.00}
+    1: {"nome": "Buquê com 3 Rosas Brancas", "preco": 100.00, "Quantidade": 20},
+    2: {"nome": "Buquê com 3 Rosas vermelhas", "preco": 100.0, "Quantidade": 20},
+    3: {"nome": "Buquê com 3 Rosas cor de Rosa", "preco": 100.00, "Quantidade": 20},
+    4: {"nome": "Buquê Mix de Flores M (colorido)", "preco": 220.00, "Quantidade": 20},
+    5: {"nome": "Buquê Paris", "preco": 380.00, "Quantidade": 20}
 }
 
+# def cadastrar_produtos():
+#     id = input("Digite o id do produto no sistema: ")
+#     produtos[id] = 
     
 carrinho = {}
 dados_do_pedido = {}
@@ -79,9 +82,7 @@ def finalizar_compra():
         
         elif pedido_confirmado == False:
             print("PEDIDO CANCELADO")
-            sair()
-
-        
+            sair()   
     else:
         print("Seu carrinho está vazio.")
 
