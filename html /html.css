@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Flower Spot</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+  <header class="topo">
+   
+    <h1 class="logo">The Flower Spot</h1>
+    <input type="text" placeholder="Pesquisar..." class="pesquisa">
+    <nav class="menu">
+      <div class="dropdown">
+        <button class="menu-btn"><i class="fas fa-bars"></i> Cidades</button>
+        <div class="menu-dropdown">
+          <a href="#">Fortaleza</a>
+          <a href="#">Juazeiro</a>
+          <a href="#">Crato</a>
+          <a href="#">Sobral</a>
+        </div>
+      </div>
+      <a href="#" class="whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+    </nav>
+  </header>
+
+ 
+  <section class="banner">
+    <img src="FLORES/Inserir um copia.jpg" alt="Banner The Flower Spot">
+  </section>
+
+  
+  <section class="destaque">
+    <h2>Produtos em Destaque</h2>
+    <div class="produtos-linha">
+      <div class="produto">
+        <img src="FLORES/18.webp" alt="Flor 1">
+        <h3>Orquídea Rosa Imperial</h3>
+        <p>R$ 89,90</p>
+        <button class="comprar">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="FLORES/buque_gerberas_e_so3.jpg" alt="Flor 2">
+        <h3>Gérbera do Sol</h3>
+        <p>R$ 94,90</p>
+        <button class="comprar">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="FLORES/lirios-brancos.jpg" alt="Flor 3">
+        <h3>Lírio da Paz Branca</h3>
+        <p>R$ 79,90</p>
+        <button class="comprar">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="FLORES/19.jpg" alt="Flor 4">
+        <h3>Dália Roxa Encantada</h3>
+        <p>R$ 99,90</p>
+        <button class="comprar">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="catalogo">
+    <h2>Catálogo Completo</h2>
+    <div class="produtos-container">
+      <div class="produtos-linha">
+        <div class="produto">
+          <img src="FLORES/1.jpg" alt="Flor 1">
+          <h3>Orquídea Rosa Imperial</h3>
+          <p>R$ 89,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/2.jpg" alt="Flor 2">
+          <h3>Gérbera do Sol</h3>
+          <p>R$ 94,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/3.jpg" alt="Flor 3">
+          <h3>Lírio da Paz Branca</h3>
+          <p>R$ 79,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/4.jpg" alt="Flor 4">
+          <h3>Dália Roxa Encantada</h3>
+          <p>R$ 99,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+      </div>
+      <div class="produtos-linha">
+        <div class="produto">
+          <img src="FLORES/5.jpg" alt="Flor 1">
+          <h3>Orquídea Rosa Imperial</h3>
+          <p>R$ 89,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/6.jpg" alt="Flor 2">
+          <h3>Gérbera do Sol</h3>
+          <p>R$ 94,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/7.jpg" alt="Flor 3">
+          <h3>Lírio da Paz Branca</h3>
+          <p>R$ 79,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/8.jpg" alt="Flor 4">
+          <h3>Dália Roxa Encantada</h3>
+          <p>R$ 99,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+      </div>
+      <div class="produtos-linha">
+        <div class="produto">
+          <img src="FLORES/9.jpg" alt="Flor 1">
+          <h3>Orquídea Rosa Imperial</h3>
+          <p>R$ 89,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/10.jpg" alt="Flor 2">
+          <h3>Gérbera do Sol</h3>
+          <p>R$ 94,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/12.jpg" alt="Flor 3">
+          <h3>Lírio da Paz Branca</h3>
+          <p>R$ 79,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/13.jpg" alt="Flor 4">
+          <h3>Dália Roxa Encantada</h3>
+          <p>R$ 99,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+      </div>
+      <div class="produtos-linha">
+        <div class="produto">
+          <img src="FLORES/14.webp" alt="Flor 1">
+          <h3>Orquídea Rosa Imperial</h3>
+          <p>R$ 89,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/15.jpg" alt="Flor 2">
+          <h3>Gérbera do Sol</h3>
+          <p>R$ 94,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/16.jpg" alt="Flor 3">
+          <h3>Lírio da Paz Branca</h3>
+          <p>R$ 79,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="FLORES/17.jpg" alt="Flor 4">
+          <h3>Dália Roxa Encantada</h3>
+          <p>R$ 99,90</p>
+          <button class="comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <p>&copy; 2025 The Flower Spot - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
+
+#----------------------css-------------------------
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background-color: #fffaf7;
+  color: #333;
+}
+
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff0f5;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 2.2rem;
+  color: #c2185b;
+  font-weight: bold;
+  font-family: "Imperial Script", cursive;
+;
+}
+
+.pesquisa {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+  position: relative;
+}
+
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 9px;
+
+}
+
+.dropdown:hover .menu-dropdown {
+  display: block;
+}
+
+.menu-dropdown a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.menu-dropdown a:hover {
+  background-color: #ffe4ec;
+}
+
+.whatsapp, .carrinho {
+  font-size: 1.4rem;
+  color: rgb(2, 100, 2);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carrinho {
+  color: #c2185b;
+}
+
+
+.banner img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+
+.destaque, .catalogo {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.destaque h2, .catalogo h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #b71c1c;
+}
+
+.produtos-linha {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.produto {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.produto h3 {
+  font-size: 1.1rem;
+  color: #6a1b9a;
+  margin: 10px 0 5px;
+}
+
+.produto p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.comprar {
+  background: linear-gradient(45deg, #e91e63, #f06292);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.comprar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #c2185b, #d81b60);
+}
+.rodape {
+  background-color: #ffe2ec;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  color: #000000;
+  font-weight: bold;
+}
