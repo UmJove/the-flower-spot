@@ -191,11 +191,9 @@ def formulario_compra(): # incluir verificações de valores (try/except)
                 endereco_complemento = input("Complemento: ").strip()
                 endereco_cidade = input("* Cidade: ").strip()
                 endereco_bairro = input("* Bairro: ").strip()
-                forma_pagamento = input("Escolha uma forma de pagamento:\n 1 - Crédito\n 2 - Débito\n 3 - Pix\n ").strip()
-                entrega = input("Escolha uma forma de entrega:\n 1 - Retirar na loja\n 2 - Receber em casa\n ").strip()
-                if comprador == "" or cpf == "" or email == "" or endereco_cep == "" or endereco_rua == "" or endereco_numero or endereco_bairro == "" or endereco_cidade == "":
-                     print("\n Erro: Campos obrigatórios não preenchidos!")
-                     continue
+                
+                if comprador == "" or cpf == "" or email == "" or endereco_cep == "" or endereco_rua == "" or endereco_numero == "" or endereco_bairro == "" or endereco_cidade == "":
+                    raise ValueError("campo(s) vazios")
 
                 # incluindo dados no form            
                 dados_do_pedido["Comprador"] = comprador
@@ -203,6 +201,9 @@ def formulario_compra(): # incluir verificações de valores (try/except)
                 dados_do_pedido["E-mail"] = email
                 dados_do_pedido["CEP"] = endereco_cep
                 dados_do_pedido["Endereço"] = [endereco_rua, endereco_numero, f"Complemento: {endereco_complemento}", f"Bairro: {endereco_bairro}", endereco_cidade]
+                
+                
+                forma_pagamento = input("Escolha uma forma de pagamento:\n 1 - Crédito\n 2 - Débito\n 3 - Pix\n ").strip()
                 if forma_pagamento == "1":
                     dados_do_pedido["Forma de pagamento"] = "crédito"
                 elif forma_pagamento == "2":
@@ -213,6 +214,7 @@ def formulario_compra(): # incluir verificações de valores (try/except)
                     raise ValueError("Opção inválida!") # fazer estrutura try-except para corrigir erro
                     
                 
+                entrega = input("Escolha uma forma de entrega:\n 1 - Retirar na loja\n 2 - Receber em casa\n ").strip()
                 if entrega == "1":
                     dados_do_pedido["Entrega"] = "retirar na loja"
                 elif entrega == "2":
@@ -220,9 +222,12 @@ def formulario_compra(): # incluir verificações de valores (try/except)
                 else:
                     raise ValueError("Opção inválida!") # fazer estrutura try-except para corrigir erro
                     #raise ValueError  
+                break
+            
             except ValueError as e:
                 print(f"Erro {e}")
-                # continue
+                continue
+        return
 
 def confirmar_pedido():
     print("\n Confirme as informações a seguir para finalizar seu pedido"

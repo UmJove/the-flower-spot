@@ -54,3 +54,22 @@ TOTAL DO PEDIDO: R$100.00
 
 #######################################################
 
+
+========== DADOS DO PEDIDO ==========
+
+=== DADOS DO PEDIDO ===
+COMPRADOR: ll
+CPF: ll
+E-MAIL: ll
+CEP: 22
+ENDEREÇO: 222, 22, Complemento: 222, Bairro: 222, 222
+FORMA DE PAGAMENTO: débito
+ENTREGA: receber em casa
+
+=== ITENS DO PEDIDO ===
+[ID-3] Buquê com 3 Rosas cor de Rosa - 1x R$ 100.00 -- R$ 100.00  
+
+TOTAL DO PEDIDO: R$100.00                      
+
+#######################################################
+
