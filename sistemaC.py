@@ -1,5 +1,6 @@
 #Sistema carrinho de compra:
 
+# pedidos = []
 produtos = {
     1: {"nome": "Buquê com 3 Rosas Brancas", "preco": 100.00, "Quantidade": 20},
     2: {"nome": "Buquê com 3 Rosas vermelhas", "preco": 100.0, "Quantidade": 20},
@@ -133,6 +134,7 @@ def finalizar_compra():
             # Salvar os dados em arquivo
             salvar_pedido_arquivo()
 
+            # numero_pedido = pedidos[-1]
             print("\n "\
             "\n >> Compra finalizada! Obrigado pela preferência. << ")
 
@@ -179,22 +181,27 @@ def formulario_compra(): # incluir verificações de valores (try/except)
         comprador = input("Nome do comprador: ")
         cpf = input("CPF: ") 
         email = input("E-mail: ")
-        endereco_rua = input("Endereço(logradouro): ")
-        endereco_numero = input("Endereço(numero): ")
-        endereco_complemento = input("Endereço (complemento): ")
+        print("Endereço ")
+        endereco_cep = input("CEP: ")
+        endereco_rua = input("Logradouro: ")
+        endereco_numero = input("Número: ")
+        endereco_complemento = input("Complemento: ")
+        endereco_cidade = input("Cidade: ")
+        endereco_bairro = input("Bairro: ")
         forma_pagamento = input("Escolha uma forma de pagamento:\n 1 - Crédito\n 2 - Débito\n 3 - Pix\n ")
         entrega = input("Escolha uma forma de entrega:\n 1 - Retirar na loja\n 2 - Receber em casa\n ")
         
-        dados_do_pedido["comprador"] = comprador
-        dados_do_pedido["cpf"] = cpf
-        dados_do_pedido["e-mail"] = email
-        dados_do_pedido["endereço"] = [endereco_rua, endereco_numero, f"complemento: {endereco_complemento}"]
+        dados_do_pedido["Comprador"] = comprador
+        dados_do_pedido["CPF"] = cpf
+        dados_do_pedido["E-mail"] = email
+        dados_do_pedido["CEP"] = endereco_cep
+        dados_do_pedido["Endereço"] = [endereco_rua, endereco_numero, f"Complemento: {endereco_complemento}", f"Bairro: {endereco_bairro}", endereco_cidade]
         if forma_pagamento == "1":
-            dados_do_pedido["forma de pagamento"] = "crédito"
+            dados_do_pedido["Forma de pagamento"] = "crédito"
         elif forma_pagamento == "2":
-            dados_do_pedido["forma de pagamento"] = "débito"
+            dados_do_pedido["Forma de pagamento"] = "débito"
         elif forma_pagamento == "3":
-            dados_do_pedido["forma de pagamento"] = "pix"
+            dados_do_pedido["Forma de pagamento"] = "pix"
         else:
             print("opção inválida") # fazer estrutura try-except para corrigir erro
             #raise ValueError  
@@ -202,7 +209,7 @@ def formulario_compra(): # incluir verificações de valores (try/except)
         if entrega == "1":
             dados_do_pedido["entrega"] = "retirar na loja"
         elif entrega == "2":
-            dados_do_pedido["entrega"] = "receber em casa"
+            dados_do_pedido["entrega"] = "receber em casa" #adicionar taxa de entrega
         else:
             print("opção inválida") # fazer estrutura try-except para corrigir erro
             #raise ValueError  
@@ -273,7 +280,6 @@ def menu(): # escolher usuário antes de dar opções (comprador(opções 1, 2, 
 def inicio():
     print("\nSeja bem-vindo à 'The Flower Spot', sua floricultura digital!")
     menu()
-
 
 # Iniciar o sistema
 inicio()
