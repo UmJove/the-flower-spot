@@ -163,14 +163,18 @@ def formulario_compra(): # incluir verificações de valores (try/except)
             dados_do_pedido["forma de pagamento"] = "débito"
         elif forma_pagamento == "3":
             dados_do_pedido["forma de pagamento"] = "pix"
-        # fazer estrutura de erro para permitir ao comprador "ajustar" a opção escolhida   
-        # else:
-        #     raise ValueError ("opção inválida, escolha novamente") 
+        else:
+            print("opção inválida") # fazer estrutura try-except para corrigir erro
+            #raise ValueError  
         
         if entrega == "1":
             dados_do_pedido["entrega"] = "retirar na loja"
         elif entrega == "2":
             dados_do_pedido["entrega"] = "receber em casa"
+        else:
+            print("opção inválida") # fazer estrutura try-except para corrigir erro
+            #raise ValueError  
+
 
 def confirmar_pedido():
     print("\n Confirme as informações a seguir para finalizar seu pedido"
