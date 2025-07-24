@@ -7,10 +7,6 @@ produtos = {
     4: {"nome": "Buquê Mix de Flores M (colorido)", "preco": 220.00, "Quantidade": 20},
     5: {"nome": "Buquê Paris", "preco": 380.00, "Quantidade": 20}
 }
-
-# def cadastrar_produtos():
-#     id = input("Digite o id do produto no sistema: ")
-#     produtos[id] = 
     
 carrinho = {}
 dados_do_pedido = {}
