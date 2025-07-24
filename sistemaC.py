@@ -234,7 +234,7 @@ def sair():
     print("Encerrando o sistema. Até logo!")
     exit()
 
-def menu(): # escolher usuário antes de dar opções (comprador(opções 1, 2, 3, 4, 5, 19), funcionário (opções 1, 6, 7, 8, 9) )
+def menu(): # escolher usuário antes de dar opções (comprador(opções 1, 2, 3, 4, 5, 9), funcionário (opções 1, 6, 7, 8, 9) )
     while True:
         print("\n--- Menu ---")
         print("1. Listar produtos")
@@ -242,9 +242,9 @@ def menu(): # escolher usuário antes de dar opções (comprador(opções 1, 2, 
         print("3. Remover do carrinho")
         print("4. Ver carrinho")
         print("5. Finalizar compra")
-        print("6. Cadastrar novo produto") # add ver com quantidades atualizadas em estoque
-        print("7. Editar produto")     
-        print("8. Excluir produto")
+        print("6. Cadastrar novo produto (somente pessoas autorizadas)") # add ver com quantidades atualizadas em estoque
+        print("7. Editar produto (somente pessoas autorizadas)")     
+        print("8. Excluir produto (somente pessoas autorizadas)")
         print("9. Sair")
 
         opcao = input("Escolha uma opção: ")
