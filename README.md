@@ -6,8 +6,8 @@ Sistema para realização de pedidos de compra online e atualização de estoque
 
 ## Responsáveis  
 
-- Professor: Everton;
-- Estudantes: Felipe Gomes, Luan Almada, Pedro Vitor, Wellington Caetano.
+- Professor: Everton Azevedo;
+- Estudantes: Felipe Gomes, Luan Almada, Pedro Vitor, Wellisson Caetano.
 
 ## Informações
 Justificativa: trabalho de conclusão de disciplina.  
