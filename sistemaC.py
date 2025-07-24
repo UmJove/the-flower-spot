@@ -7,9 +7,69 @@ produtos = {
     4: {"nome": "Buquê Mix de Flores M (colorido)", "preco": 220.00, "Quantidade": 20},
     5: {"nome": "Buquê Paris", "preco": 380.00, "Quantidade": 20}
 }
-    
+
+def cadastrar_produto():
+    print("\n--- Cadastro de Novo Produto ---")
+    try:
+        nome = input("Nome do produto: ").strip()
+        preco = float(input("Preço do produto (ex: 199.90): "))
+        quantidade = int(input("Quantidade em estoque: "))
+
+        # Gerar novo ID automático baseado no maior ID atual
+        novo_id = max(produtos.keys(), default=0) + 1
+
+        produtos[novo_id] = {
+            "nome": nome,
+            "preco": preco,
+            "Quantidade": quantidade
+        }
+
+        print(f"\nProduto '{nome}' cadastrado com sucesso com ID {novo_id}!")
+    except ValueError:
+        print("Erro: Entrada inválida. Tente novamente com os dados corretos.")
+
+def editar_produto():
+    listar_produtos()
+    try:
+        id = int(input("\nDigite o ID do produto que deseja editar: "))
+        if id in produtos:
+            print(f"Editando produto: {produtos[id]['nome']}")
+            novo_nome = input("Novo nome (deixe em branco para manter o atual): ").strip()
+            novo_preco = input("Novo preço (deixe em branco para manter o atual): ").strip()
+            nova_qtd = input("Nova quantidade (deixe em branco para manter a atual): ").strip()
+
+            if novo_nome:
+                produtos[id]['nome'] = novo_nome
+            if novo_preco:
+                produtos[id]['preco'] = float(novo_preco)
+            if nova_qtd:
+                produtos[id]['Quantidade'] = int(nova_qtd)
+
+            print("Produto atualizado com sucesso.")
+        else:
+            print("Produto com esse ID não encontrado.")
+    except ValueError:
+        print("Entrada inválida. Tente novamente.")
+
+def excluir_produto():
+    listar_produtos()
+    try:
+        id = int(input("\nDigite o ID do produto que deseja excluir: "))
+        if id in produtos:
+            confirmacao = input(f"Tem certeza que deseja excluir '{produtos[id]['nome']}'? (s/n): ")
+            if confirmacao.lower() == 's':
+                del produtos[id]
+                print("Produto excluído com sucesso.")
+            else:
+                print("Operação cancelada.")
+        else:
+            print("Produto com esse ID não encontrado.")
+    except ValueError:
+        print("Entrada inválida.")
+
 carrinho = {}
 dados_do_pedido = {}
+
 def listar_produtos():
     print("\nProdutos disponíveis:")
     for id, info in produtos.items():
@@ -138,15 +198,18 @@ def sair():
     print("Encerrando o sistema. Até logo!")
     exit()
 
-def menu():
+def menu(): # escolher usuário antes de dar opções (comprador(opções 1, 2, 3, 4, 5, 19), funcionário (opções 1, 6, 7, 8, 9) )
     while True:
         print("\n--- Menu ---")
         print("1. Listar produtos")
         print("2. Adicionar ao carrinho")
-        print("3. Remover do carrinho") #SE TIVER VAZIO SAIR DA ROTINA (Já alterado)
+        print("3. Remover do carrinho")
         print("4. Ver carrinho")
         print("5. Finalizar compra")
-        print("6. Sair")
+        print("6. Cadastrar novo produto") # add ver com quantidades atualizadas em estoque
+        print("7. Editar produto")     
+        print("8. Excluir produto")
+        print("9. Sair")
 
         opcao = input("Escolha uma opção: ")
 
@@ -161,8 +224,13 @@ def menu():
         elif opcao == "5":
             finalizar_compra()
         elif opcao == "6":
+            cadastrar_produto()
+        elif opcao == "7":
+            editar_produto()
+        elif opcao == "8":
+            excluir_produto()
+        elif opcao == "9":
             sair()
-            break
         else:
             print("Opção inválida. Tente novamente.")
 
@@ -170,7 +238,6 @@ def inicio():
     print("\nSeja bem-vindo à 'The Flower Spot', sua floricultura digital!")
     menu()
 
-    
 
 # Iniciar o sistema
 inicio()
