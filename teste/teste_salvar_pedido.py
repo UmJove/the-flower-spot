@@ -119,7 +119,7 @@ def ver_carrinho():
         for id, item in carrinho.items():
             subtotal = item["preco"] * item["quantidade"]
             total += subtotal
-            print(f"{item['quantidade']}x {item['nome']} - R${item['preco']:.2f} (id = {id})") # imprimindo id dos produtos
+            print(f"{item['quantidade']}x {item['nome']} - R${item['preco']:.2f} (ID = {id})") # imprimindo id dos produtos
         print(f"Total: R${total:.2f}")
 
 def finalizar_compra():
@@ -131,16 +131,47 @@ def finalizar_compra():
         if pedido_confirmado == True:
             print("\n "\
             "\n Compra finalizada! Obrigado pela preferência.")
+            
+            # Salvar os dados em arquivo
+            salvar_pedido_arquivo()
+            
             carrinho.clear()
         
         elif pedido_confirmado == "menu":
             menu()
         
         elif pedido_confirmado == False:
-            print("PEDIDO CANCELADO")
+            print("PEDIDO CANCELADO!")
             sair()   
     else:
         print("Seu carrinho está vazio.")
+
+def salvar_pedido_arquivo():
+    with open("dados\pedidos.txt", 'a', encoding='utf-8') as arquivo:
+        # Escrever cabeçalho
+        arquivo.write("\n========== DADOS DO PEDIDO ==========\n")
+        
+        # Escrever dados do cliente
+        arquivo.write("\n=== DADOS DO PEDIDO ===\n")
+        for chave, valor in dados_do_pedido.items():
+            if isinstance(valor, list):  # Tratar endereço que é uma lista
+                valor = ", ".join(str(item) for item in valor)
+            arquivo.write(f"{chave.upper()}: {valor}\n")
+        
+        # Escrever itens do carrinho
+        arquivo.write("\n=== ITENS DO PEDIDO ===\n")
+
+        total = 0
+        for chave,valor in carrinho.items():
+            subtotal = (valor["quantidade"])*(valor["preco"])
+            arquivo.write(f"[ID-{chave}] {valor["nome"]} - {valor["quantidade"]}x R$ {(valor["preco"]):.2f} -- R$ {subtotal:.2f}  \n")
+            total += subtotal
+        # Escrever total
+        arquivo.write(f"\nTOTAL DO PEDIDO: R${total:.2f}\
+                      \n\n{"#"*55}\n\n")
+            
+    print(f"\nPedido salvo!")
+
 
 def formulario_compra(): # incluir verificações de valores (try/except)
         print("\nPara finalizar sua compra forneça as informações a seguir: \n")

@@ -1,0 +1,18 @@
+========== DADOS DO PEDIDO ==========
+
+=== DADOS DO CLIENTE ===
+COMPRADOR: José Arnaldo
+CPF: 000.999.111-66
+E-MAIL: jose@mail.com
+ENDEREÇO: Rua Tiririca, 7453, complemento: altos
+FORMA DE PAGAMENTO: crédito
+ENTREGA: receber em casa
+
+=== ITENS DO PEDIDO ===
+[ID-5] Buquê Paris - 10x R$ 380.00 -- R$ 3800.00  
+[ID-4] Buquê Mix de Flores M (colorido) - 10x R$ 220.00 -- R$ 2200.00  
+
+TOTAL DO PEDIDO: R$6000.00                      
+
+#######################################################
+
