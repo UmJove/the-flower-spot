@@ -73,3 +73,22 @@ TOTAL DO PEDIDO: R$100.00
 
 #######################################################
 
+
+========== DADOS DO PEDIDO ==========
+
+=== DADOS DO PEDIDO ===
+COMPRADOR: Leu
+CPF: 000
+E-MAIL: ss
+CEP: ss
+ENDEREÇO: ss, ss, Complemento: 1, Bairro: 1, 1
+FORMA DE PAGAMENTO: crédito
+ENTREGA: retirar na loja
+
+=== ITENS DO PEDIDO ===
+[ID-1] Buquê com 3 Rosas Brancas - 10x R$ 100.00 -- R$ 1000.00  
+
+TOTAL DO PEDIDO: R$1000.00                      
+
+#######################################################
+
