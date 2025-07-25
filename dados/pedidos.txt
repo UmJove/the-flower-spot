@@ -1,0 +1,75 @@
+========== DADOS DO PEDIDO ==========
+
+=== DADOS DO PEDIDO ===
+COMPRADOR: Leonardo
+CPF: 00011122299
+E-MAIL: leo@g.com
+ENDEREÇO: av. rosa dourada, 798, complemento: 5º andar, apt 8
+FORMA DE PAGAMENTO: crédito
+ENTREGA: receber em casa
+
+=== ITENS DO PEDIDO ===
+[ID-4] Buquê Mix de Flores M (colorido) - 4x R$ 220.00 -- R$ 880.00  
+[ID-5] Buquê Paris - 5x R$ 380.00 -- R$ 1900.00  
+
+TOTAL DO PEDIDO: R$2780.00                      
+
+#######################################################
+
+
+========== DADOS DO PEDIDO ==========
+
+=== DADOS DO PEDIDO ===
+COMPRADOR: Caetano W
+CPF: 00011122233
+E-MAIL: caetano@mail.com
+ENDEREÇO: Rua das Folres, 225, complemento: A
+FORMA DE PAGAMENTO: pix
+ENTREGA: retirar na loja
+
+=== ITENS DO PEDIDO ===
+[ID-2] Buquê com 3 Rosas vermelhas - 1x R$ 100.00 -- R$ 100.00  
+[ID-4] Buquê Mix de Flores M (colorido) - 1x R$ 220.00 -- R$ 220.00  
+
+TOTAL DO PEDIDO: R$320.00                      
+
+#######################################################
+
+
+========== DADOS DO PEDIDO ==========
+
+=== DADOS DO PEDIDO ===
+COMPRADOR: Luan
+CPF: 00000000000
+E-MAIL: luan2.com
+CEP: 607000000
+ENDEREÇO: rua abc, , Complemento: A, Bairro: Parangaba, Fortal
+FORMA DE PAGAMENTO: pix
+ENTREGA: receber em casa
+
+=== ITENS DO PEDIDO ===
+[ID-1] Buquê com 3 Rosas Brancas - 1x R$ 100.00 -- R$ 100.00  
+
+TOTAL DO PEDIDO: R$100.00                      
+
+#######################################################
+
+
+========== DADOS DO PEDIDO ==========
+
+=== DADOS DO PEDIDO ===
+COMPRADOR: ll
+CPF: ll
+E-MAIL: ll
+CEP: 22
+ENDEREÇO: 222, 22, Complemento: 222, Bairro: 222, 222
+FORMA DE PAGAMENTO: débito
+ENTREGA: receber em casa
+
+=== ITENS DO PEDIDO ===
+[ID-3] Buquê com 3 Rosas cor de Rosa - 1x R$ 100.00 -- R$ 100.00  
+
+TOTAL DO PEDIDO: R$100.00                      
+
+#######################################################
+
