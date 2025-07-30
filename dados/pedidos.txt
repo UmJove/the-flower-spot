@@ -41,3 +41,25 @@ TOTAL DO PEDIDO: R$1320.00
 
 #######################################################
 
+
+========== DADOS DO PEDIDO ==========
+
+=== DADOS DO PEDIDO ===
+COMPRADOR: Luan
+CPF: 00011122236
+E-MAIL: luan@luan.com
+CEP: 60606060
+LOGRADOURO: Rua A
+NÚMERO: 55
+COMPLEMENTO: vazio
+CIDADE: Fortaleza
+FORMA DE PAGAMENTO: débito
+ENTREGA: receber em casa
+
+=== ITENS DO PEDIDO ===
+[ID-3] Buquê com 3 Rosas cor de Rosa - 1x R$ 100.00 -- R$ 100.00  
+
+TOTAL DO PEDIDO: R$100.00                      
+
+#######################################################
+
