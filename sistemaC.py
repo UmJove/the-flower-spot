@@ -1,6 +1,10 @@
-#Sistema carrinho de compra:
+# import json
+# pedidos = [] 
+# inplementar salvamento da contagem de pedidos em arquivo JSON (futuramente) 
 
-# pedidos = [] #inplementar salvamento da contagem de pedidos em arquivo JSON (futuramente) 
+
+# Sistema
+# Carrinho de compra, estoque de produtos, formulário de pedidos
 carrinho = {}
 dados_do_pedido = {}
 endereço = {}
